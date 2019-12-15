@@ -1,4 +1,67 @@
-<div>Try and access Log In Page now</div>
-<button (click)="DeAuthorize()">
-  Log Out
-</button>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Login Screen</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <button (click)="DeAuthorize()">
+        Log Out
+      </button>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only"></nav>
+    </div>
+  </header>
+</div>
+<!-- Simple list -->
+<style>
+  .demo-list-item {
+    width: 300px;
+  }
+</style>
+<div class="mdl-card mdl-layout">
+  <div class="mdl-card__title">
+    <ul class="demo-list-icon mdl-list">
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <h3><strong>You are now logged in!</strong></h3>
+        </span>
+      </li>
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <strong>Username:</strong> {{ userName }}
+        </span>
+      </li>
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <strong>Your Friends:</strong>
+        </span>
+      </li>
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">person</i>
+          Bob
+        </span>
+      </li>
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">person</i>
+          Jim
+        </span>
+      </li>
+      <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">person</i>
+          Kathy
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <strong>
+    You will be unable to access the login page until you logout and vice
+    versa... Have a nice day!
+  </strong>
+</div>

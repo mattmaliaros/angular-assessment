@@ -9,16 +9,16 @@ import { SESSION_STORAGE, StorageService } from "ngx-webstorage-service";
   styleUrls: ["./logged-in.component.css"]
 })
 export class LoggedInComponent implements OnInit {
+  userName: string = this.storage.get("user");
   constructor(
     private authGuard: AuthGuard,
     private router: Router,
     private authService: AuthService,
     @Inject(SESSION_STORAGE) private storage: StorageService
-  ) {
-   
-  }
+  ) {}
 
   ngOnInit() {}
+
   public DeAuthorize() {
     this.storage.set("auth", false);
     this.authGuard.canActivate();
